@@ -1,5 +1,6 @@
 package Esercizio_2;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -26,10 +27,13 @@ public class GeneratoreNumeri {
 	public void ordineInverso() {
 		List<Integer> l2 = new ArrayList<>(l1);
 		System.out.println("Stampo nuova lista con ordine inverso...");
-		for(int i = l2.size() - 1; i >= 0; i--) {
+		Collections.reverse(l2);
+		
+		for(int i = 0; i < l2.size(); i++) {
 			System.out.println(l2.get(i));
 		}
 	}
+	
 	
 	public void pariDispari() {
 		if(isEven) {
